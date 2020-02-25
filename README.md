@@ -24,4 +24,4 @@ Ideally, these would be populated with data pulled from [WorkDay].
 
 This will be a challenge no matter what but we could parse the unique string indices that are already there when using `for_each` loops. The `tfstate` file should have them. We can match what's pulled from the API and run through that table to `terraform import 'resource.instance["index"]' <github_resource_identifier>` the resources.
 
-[WorkDay]: https://www.myworkday.com/***REMOVED***
+[WorkDay]: https://www.myworkday.com/
