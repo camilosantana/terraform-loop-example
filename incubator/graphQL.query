@@ -1,0 +1,23 @@
+query listUsers($org: String!, $first: Int!, $after: String!) {
+  organization(login: $org) {
+    membersWithRole(first: $first, after: $after) {
+      edges {
+        role
+        node {
+          login
+          name
+          email
+        }
+      }
+      pageInfo {
+        endCursor
+      }
+    }
+  }
+}
+=====variables
+{
+  "org" : "procore",
+  "first" : 10,
+  "after" :"Y3Vyc29yOnYyOpHOAEKsHw=="
+}
